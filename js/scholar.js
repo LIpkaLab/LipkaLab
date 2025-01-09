@@ -1,7 +1,7 @@
 // SerpApi Configuration
 const apiKey = '4458b87997fec3c9b039449f870acf9ecc543b307e07f607c16a12c557984cbe'; // Replace with your SerpApi key
 const authorId = 'LeQcPl4AAAAJ&hl=pt-BR&oi=ao'; // Replace with Dr. Alex's Google Scholar ID
-const endpoint = `https://serpapi.com/search.json?engine=google_scholar_author&author_id=${authorId}&api_key=${apiKey}`;
+const endpoint = `https://serpapi.com/search.json?engine=google_scholar_author&author_id=${LeQcPl4AAAAJ&hl=pt-BR&oi=ao}&api_key=${4458b87997fec3c9b039449f870acf9ecc543b307e07f607c16a12c557984cbe}`;
 
 // Fetch and Display Articles
 async function fetchPublications() {
