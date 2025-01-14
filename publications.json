@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Genotype by environment model predictive ability in Miscanthus",
+        "authors": "Widener S., et al.",
+        "year": 2023,
+        "journal": "GCB Bioenergy",
+        "image": "images/sara_paper.jpg",
+        "link": "https://doi.org/10.1111/gcbb.13113sarah"
+    },
+    {
+        "title": "Assessment of two statistical approaches for variance genome-wide association studies in plants",
+        "authors": "Murphy M. D., Fernandes S.B., Morota G. et al.",
+        "year": 2022,
+        "journal": "Heredity",
+        "image": "images/murphy.webp",
+        "link": "https://doi.org/10.1038/s41437-022-00541-1"
+    },
+    {
+        "title": "GAPIT: genome association and prediction integrated tool",
+        "authors": "Lipka A.E., et al. ",
+        "year": 2012,
+        "journal": "Bioinformatics",
+        "image": "images/lipka_etal.jpg",
+        "link": " https://doi.org/10.1093/bioinformatics/bts444"
+    }
+]
