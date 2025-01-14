@@ -1,15 +1,17 @@
 // SerpApi Configuration
 const apiKey = '4458b87997fec3c9b039449f870acf9ecc543b307e07f607c16a12c557984cbe';
 const authorId = 'LeQcPl4AAAAJ';
-const endpoint = `https://serpapi.com/search.json?engine=google_scholar_author&author_id=${authorId}&api_key=${apiKey}`;
+const endpoint = `https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=google_scholar_author&author_id=${authorId}&api_key=${apiKey}`;
 
 // Fetch and Display Articles
 async function fetchPublications() {
     try {
+        console.log('Fetching data from:', endpoint); // Debugging log
         const response = await fetch(endpoint);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
+
         const data = await response.json();
         const articles = data.articles;
         const publicationsList = document.getElementById('publications-list');
@@ -36,3 +38,4 @@ async function fetchPublications() {
 
 // Load Publications on Page Load
 document.addEventListener('DOMContentLoaded', fetchPublications);
+
