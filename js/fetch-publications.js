@@ -1,23 +1,23 @@
-// SerpApi Configuration
-const apiKey = '4458b87997fec3c9b039449f870acf9ecc543b307e07f607c16a12c557984cbe';
-const authorId = 'LeQcPl4AAAAJ';
-const endpoint = `https://cors-anywhere.herokuapp.com/https://serpapi.com/search.json?engine=google_scholar_author&author_id=${authorId}&api_key=${apiKey}`;
+// Endpoint do Servidor Proxy
+const endpoint = 'http://localhost:3000/fetch-scholar'; // Substitua pelo URL do proxy se estiver hospedado
 
-// Fetch and Display Articles
+// Função para Buscar e Exibir Artigos
 async function fetchPublications() {
     try {
-        console.log('Fetching data from:', endpoint); // Debugging log
-        const response = await fetch(endpoint);
+        console.log('Fetching data from:', endpoint); // Log para depuração
+        const response = await fetch(endpoint); // Faz a requisição ao proxy
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const data = await response.json();
-        const articles = data.articles;
+        const data = await response.json(); // Converte a resposta em JSON
+        console.log('Fetched data:', data); // Log dos dados recebidos para depuração
+
+        const articles = data.articles; // Acessa os artigos na resposta
         const publicationsList = document.getElementById('publications-list');
         publicationsList.innerHTML = ''; // Limpa o conteúdo existente
 
-        // Adiciona os artigos mais recentes
+        // Adiciona cada artigo à lista de publicações
         articles.forEach((article) => {
             const publicationHTML = `
                 <div class="publication-item">
@@ -30,12 +30,11 @@ async function fetchPublications() {
             publicationsList.innerHTML += publicationHTML;
         });
     } catch (error) {
-        console.error('Error fetching publications:', error);
+        console.error('Error fetching publications:', error); // Log do erro no console
         const publicationsList = document.getElementById('publications-list');
-        publicationsList.innerHTML = '<p>Unable to fetch publications at the moment.</p>';
+        publicationsList.innerHTML = '<p>Unable to fetch publications at the moment.</p>'; // Mensagem de erro para o usuário
     }
 }
 
-// Load Publications on Page Load
+// Carrega Publicações ao Carregar a Página
 document.addEventListener('DOMContentLoaded', fetchPublications);
-
