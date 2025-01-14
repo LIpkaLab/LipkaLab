@@ -143,7 +143,9 @@ footer {
 }
 
 /* Publicações */
-.publication-item {
+.publication-highlight {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
     padding: 15px;
     border: 1px solid #ddd;
@@ -152,27 +154,33 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.publication-item h3 {
-    font-size: 1.5rem;
-    color: var(--uiuc-blue);
-    margin-bottom: 5px;
+.publication-highlight img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.publication-item p {
-    font-size: 1rem;
-    color: var(--uiuc-blue);
-    margin: 5px 0;
+.publication-highlight h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0 0 5px 0;
 }
 
-.publication-item a {
-    color: var(--uiuc-orange);
+.publication-highlight p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.publication-highlight a {
+    color: #007ACC;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 5px;
     display: inline-block;
 }
 
-.publication-item a:hover {
+.publication-highlight a:hover {
     text-decoration: underline;
-    color: var(--uiuc-blue);
 }
